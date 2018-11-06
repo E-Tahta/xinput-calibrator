@@ -1,0 +1,26 @@
+From: =?utf-8?q?Yunusemre_=C5=9Eent=C3=BCrk?=
+ <yunusemre.senturk@pardus.org.tr>
+Date: Tue, 6 Nov 2018 16:16:02 +0300
+Subject: Fix ASCII mistake on second line
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>
+---
+ src/gui/gui_common.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/gui/gui_common.cpp b/src/gui/gui_common.cpp
+index 6641dbc..3b1ef65 100644
+--- a/src/gui/gui_common.cpp
++++ b/src/gui/gui_common.cpp
+@@ -36,7 +36,7 @@ void get_display_texts(std::list<std::string> *texts, Calibrator *calibrator)
+     }
+ 	texts->push_back(str);
+     /* 2nd line */
+-    str = "Arti şeklinin ortasina dokunun, hassasiyeti artirmak icin kalem kullanin.";
++    str = "Arti seklinin ortasina dokunun, hassasiyeti artirmak icin kalem kullanin.";
+ 	texts->push_back(str);
+     /* 3rd line */
+     str = "";

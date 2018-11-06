@@ -3,3 +3,4 @@
 0003-do_not_install_tester.patch
 0004-Do-not-install-desktop-file.patch
 0005-Change-gui-strings.patch
+0006-Fix-ASCII-mistake-on-second-line.patch
