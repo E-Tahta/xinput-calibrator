@@ -1,3 +1,10 @@
+xinput-calibrator (0.7.5+git20140201-2pardus2) stable; urgency=medium
+
+  * Pardus CI implementation
+  * Add patches
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Tue, 06 Nov 2018 16:16:33 +0300
+
 xinput-calibrator (0.7.5+git20140201-2pardus1) stable; urgency=medium
 
   * Add patches
