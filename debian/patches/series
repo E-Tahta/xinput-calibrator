@@ -1,3 +1,5 @@
-typo_in_man.patch
-typo_in_src.patch
-do_not_install_tester.patch
+0001-typo_in_man.patch
+0002-typo_in_src.patch
+0003-do_not_install_tester.patch
+0004-Do-not-install-desktop-file.patch
+0005-Change-gui-strings.patch

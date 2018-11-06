@@ -1,0 +1,21 @@
+From: Andrea Colangelo <warp10@debian.org>
+Date: Tue, 6 Nov 2018 13:08:45 +0300
+Subject: do_not_install_tester
+
+---
+ src/Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/Makefile.am b/src/Makefile.am
+index f52b71b..582a717 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -30,7 +30,7 @@ SUBDIRS = \
+ 
+ AM_CXXFLAGS = -Wall -ansi -pedantic
+ 
+-bin_PROGRAMS = xinput_calibrator tester
++bin_PROGRAMS = xinput_calibrator
+ 
+ COMMON_SRCS=calibrator.cpp calibrator/XorgPrint.cpp calibrator/Evdev.cpp calibrator/Usbtouchscreen.cpp main_common.cpp gui/gui_common.cpp
+ 

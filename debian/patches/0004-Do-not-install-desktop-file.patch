@@ -1,0 +1,24 @@
+From: =?utf-8?q?Yunusemre_=C5=9Eent=C3=BCrk?=
+ <yunusemre.senturk@pardus.org.tr>
+Date: Tue, 6 Nov 2018 14:50:06 +0300
+Subject: Do not install desktop file
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>
+---
+ scripts/Makefile.am | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/scripts/Makefile.am b/scripts/Makefile.am
+index a05579f..c3398a1 100644
+--- a/scripts/Makefile.am
++++ b/scripts/Makefile.am
+@@ -7,6 +7,3 @@ EXTRA_DIST = \
+ 
+ icon_DATA = xinput_calibrator.svg xinput_calibrator.xpm
+ icondir = $(datadir)/pixmaps
+-
+-util_DATA = xinput_calibrator.desktop
+-utildir = $(datadir)/applications

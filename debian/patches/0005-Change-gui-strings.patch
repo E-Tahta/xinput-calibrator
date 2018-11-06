@@ -1,0 +1,77 @@
+From: =?utf-8?q?Yunusemre_=C5=9Eent=C3=BCrk?=
+ <yunusemre.senturk@pardus.org.tr>
+Date: Tue, 6 Nov 2018 15:08:50 +0300
+Subject: Change gui strings
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>
+---
+ src/gui/gtkmm.cpp      |  2 +-
+ src/gui/gui_common.cpp | 14 +++++++-------
+ src/gui/x11.cpp        |  2 +-
+ 3 files changed, 9 insertions(+), 9 deletions(-)
+
+diff --git a/src/gui/gtkmm.cpp b/src/gui/gtkmm.cpp
+index 9c189d0..1bdd014 100644
+--- a/src/gui/gtkmm.cpp
++++ b/src/gui/gtkmm.cpp
+@@ -216,7 +216,7 @@ bool CalibrationArea::on_button_press_event(GdkEventButton *event)
+     bool success = calibrator->add_click((int)event->x_root, (int)event->y_root);
+ 
+     if (!success && calibrator->get_numclicks() == 0) {
+-        draw_message("Mis-click detected, restarting...");
++        draw_message("Hatali dokunma, yeniden baslatiliyor...");
+     } else {
+         draw_message(NULL);
+     }
+diff --git a/src/gui/gui_common.cpp b/src/gui/gui_common.cpp
+index 91ea993..6641dbc 100644
+--- a/src/gui/gui_common.cpp
++++ b/src/gui/gui_common.cpp
+@@ -27,24 +27,24 @@ void get_display_texts(std::list<std::string> *texts, Calibrator *calibrator)
+ {
+     std::string str;
+     /* 1st line */
+-    str = "Touchscreen Calibration";
++    str = "ETAP Dokunmatik Kalibrasyon Araci";
+     const char* sysfs_name = calibrator->get_sysfs_name();
+     if(sysfs_name != NULL) {
+-        str += " for '";
++        str += " (cihaz : ";
+         str += sysfs_name;
+-        str += "'";
+-	}
++        str += ")";
++    }
+ 	texts->push_back(str);
+     /* 2nd line */
+-    str = "Press the point, use a stylus to increase precision.";
++    str = "Arti şeklinin ortasina dokunun, hassasiyeti artirmak icin kalem kullanin.";
+ 	texts->push_back(str);
+     /* 3rd line */
+     str = "";
+ 	texts->push_back(str);
+     /* 4th line */
+-    str = "(To abort, press any key";
++    str = "(Kapatmak icin, bir tusa basin";
+     if(calibrator->get_use_timeout())
+-        str += " or wait)";
++        str += " ya da bekleyin)";
+     else
+         str += ")";
+ 	texts->push_back(str);
+diff --git a/src/gui/x11.cpp b/src/gui/x11.cpp
+index 3d75e3b..e5b43cc 100644
+--- a/src/gui/x11.cpp
++++ b/src/gui/x11.cpp
+@@ -310,7 +310,7 @@ bool GuiCalibratorX11::on_button_press_event(XEvent event)
+     bool success = calibrator->add_click(event.xbutton.x, event.xbutton.y);
+ 
+     if (!success && calibrator->get_numclicks() == 0) {
+-        draw_message("Mis-click detected, restarting...");
++        draw_message("Hatali dokunma, yeniden baslatiliyor...");
+     }
+ 
+     // Are we done yet?

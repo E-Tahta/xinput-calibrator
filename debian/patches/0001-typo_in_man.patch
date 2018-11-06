@@ -1,0 +1,21 @@
+From: Andrea Colangelo <warp10@debian.org>
+Date: Tue, 6 Nov 2018 13:08:45 +0300
+Subject: typo_in_man
+
+---
+ man/xinput_calibrator.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/man/xinput_calibrator.1 b/man/xinput_calibrator.1
+index e0d84a6..48bb37c 100644
+--- a/man/xinput_calibrator.1
++++ b/man/xinput_calibrator.1
+@@ -56,7 +56,7 @@ turns off the timeout
+ .PP 
+ .TP 8
+ .B \-\-output\-type \fIauto|xorg.conf.d|hal|xinput\fP
+-type of config to ouput (auto=automatically detect, default: auto)
++type of config to output (auto=automatically detect, default: auto)
+ .PP 
+ .TP 8
+ .B \-\-fake

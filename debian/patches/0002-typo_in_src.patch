@@ -1,10 +1,16 @@
-Description: Fix typo in src/main_common.cpp
-Author: Andrea Colangelo <warp10@debian.org>
-Last-Update: 2014-02-01
+From: Andrea Colangelo <warp10@debian.org>
+Date: Tue, 6 Nov 2018 13:08:45 +0300
+Subject: typo_in_src
 
---- xinput-calibrator-0.7.5+git20130410.orig/src/main_common.cpp
-+++ xinput-calibrator-0.7.5+git20130410/src/main_common.cpp
-@@ -197,7 +197,7 @@ static void usage(char* cmd, unsigned th
+---
+ src/main_common.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/main_common.cpp b/src/main_common.cpp
+index da8a3a3..036fb00 100644
+--- a/src/main_common.cpp
++++ b/src/main_common.cpp
+@@ -197,7 +197,7 @@ static void usage(char* cmd, unsigned thr_misclick)
      fprintf(stderr, "\t--precalib: manually provide the current calibration setting (eg. the values in xorg.conf)\n");
      fprintf(stderr, "\t--misclick: set the misclick threshold (0=off, default: %i pixels)\n",
          thr_misclick);
